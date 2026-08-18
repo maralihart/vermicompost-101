@@ -37,6 +37,7 @@
           <p class="deck">A low-mess, review-based way to run the Classic: two dry-peat buffer trays protect three damp working trays, while weekly food stays in a covered surface pile.</p>
           <div class="button-row">
             <a class="button primary" href="#stack">See the exact stack</a>
+            <button class="button copilot-button" type="button" data-copilot-trigger hidden>Create with Copilot</button>
             <a class="button secondary" href="print-guide.html">Open print guide</a>
           </div>
           <ul class="quick-facts" aria-label="Method summary">
@@ -236,5 +237,38 @@
       </div>
     </div>
   </footer>
+
+  <dialog class="copilot-dialog" data-copilot-dialog aria-labelledby="copilot-dialog-title" aria-describedby="copilot-dialog-description">
+    <div class="dialog-heading">
+      <div>
+        <p class="eyebrow">Copied for you</p>
+        <h2 id="copilot-dialog-title">Create a researched product guide with Copilot</h2>
+      </div>
+      <form method="dialog">
+        <button class="dialog-close" type="submit" aria-label="Close prompt">×</button>
+      </form>
+    </div>
+    <p id="copilot-dialog-description">Replace <strong>[YOUR PRODUCT]</strong> and any bracketed details, then paste this prompt into GitHub Copilot. It is copied automatically when the dialog opens.</p>
+    <textarea class="copilot-prompt" data-copilot-prompt readonly rows="18">Create a polished, beginner-friendly educational website for [YOUR PRODUCT], using this VermiHut Classic guide as the structural and editorial reference. Read and follow SKILL.md as the execution contract.
+
+First identify the exact product, model, edition, region, audience, desired outcome, and any supplied source material. Research before writing. Prefer current exact-product manufacturer documentation, then government, university, standards-body, or peer-reviewed sources. Use retailer reviews, forums, and community material only for clearly labeled experience or preference. Record concise cited notes, URLs, access dates, supported claims, limitations, conflicts, and model/region scope in research-notes.md. Never silently apply guidance from a related product to the selected one.
+
+Build a complete static website that opens directly from index.html with no build step or external dependency. Preserve any supplied facts and clearly distinguish official instructions, general guidance, selected methods, inference, and anecdote. Include:
+- a precise product scope, audience, and practical outcome;
+- one memorable system or operating model with original accessible HTML/CSS/SVG visuals;
+- setup, materials or components, step-by-step operation, recurring care, alternatives, troubleshooting, safety cautions, and next steps as appropriate;
+- observable checks instead of unsupported fixed promises;
+- citations and visible scope notes beside guidance they qualify;
+- semantic HTML, keyboard-visible focus, useful SVG titles/descriptions, responsive layouts, and offline-friendly assets;
+- a separately authored print-guide.html and print-guide.css that condense verified content into a readable 1-3 page Letter/A4 guide without clipped cards, split diagrams, blank overflow pages, or unnecessary decoration.
+
+Update README.md with the finished site's purpose, usage, file map, Copilot launcher and clipboard fallback, mobile support, and QA steps. Keep SKILL.md reusable for future product-specific educational sites. Do not modify source.md unless explicitly instructed.
+
+Before finishing, validate JavaScript syntax, unique IDs, anchors, relative links, required files, file:// opening, keyboard and dialog behavior, clipboard success and manual-selection fallback, 320px reflow, zoom/touch usability, reduced motion, and Letter/A4 print output. Confirm website, research notes, and print guide agree on facts, terms, cautions, dates, and product scope.</textarea>
+    <div class="dialog-actions">
+      <button class="button primary" type="button" data-copy-prompt>Copy prompt again</button>
+      <span class="copy-status" data-copy-status role="status" aria-live="polite"></span>
+    </div>
+  </dialog>
 </body>
 </html>
